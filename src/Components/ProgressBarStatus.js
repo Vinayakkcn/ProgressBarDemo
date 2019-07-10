@@ -9,7 +9,7 @@ const ProgressBarStatus = props => {
       <MDBProgress
         material
         value={props.barValue}
-        height="20px"
+        style={{backgroundColor:(props.barValue / props.limit) * 100}>75? "red": "blue"}
         className = "progressBar" 
       >
         {((props.barValue / props.limit) * 100).toFixed(0)}

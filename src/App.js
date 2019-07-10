@@ -33,7 +33,6 @@ class App extends Component {
   }
 
   changeBars(buttonLabel) {
-    console.log();
     let barList = this.state.bars;
     let newBarList = barList.map((barValue, index) => {
       let newValue = barValue + buttonLabel;
@@ -59,9 +58,7 @@ class App extends Component {
   }
 
   setCurrentProgressBar(selectedValue) {
-    console.log(selectedValue);
     this.setState({ currentProgressBar: selectedValue });
-    console.log(this.state);
   }
 
   render() {
