@@ -4,12 +4,6 @@ import { MDBProgress } from "mdbreact";
 import "../styles/Progressbar.scss";
 
 const ProgressBarStatus = props => {
-  // if((props.barValue / props.limit) * 100>75) {
-  //   props.color = "danger";
-  // }
-  // else{
-  //   props.color = "success";
-  // }
   return (
     <>
       <MDBProgress

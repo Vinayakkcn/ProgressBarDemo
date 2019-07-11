@@ -22,6 +22,7 @@ class App extends Component {
     this.setCurrentProgressBar = this.setCurrentProgressBar.bind(this);
   }
 
+  //fetching data from the endpoints and setting data in to the app state
   async componentDidMount() {
     const resultProgress = await fetch("http://pb-api.herokuapp.com/bars");
     const resultData = await resultProgress.json();
@@ -32,6 +33,7 @@ class App extends Component {
     });
   }
 
+  //helper method for changing  the progressbar values on clicking the buttons and setting new value in to state
   changeBars(buttonLabel) {
     let barList = this.state.bars;
     let newBarList = barList.map((barValue, index) => {
@@ -53,10 +55,12 @@ class App extends Component {
     });
   }
 
+  //helper method adding/reducing the button value to the progressbar value
   setNewBarValue(buttonLabel, barValue) {
     return barValue + buttonLabel;
   }
 
+  //helper method setting the state of current selected dropdown
   setCurrentProgressBar(selectedValue) {
     this.setState({ currentProgressBar: selectedValue });
   }
