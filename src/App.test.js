@@ -6,11 +6,16 @@ import App from "./App";
 import Adapter from "enzyme-adapter-react-16";
 
 
-configure({ adapter: new Adapter() });
+configure({ adapter: new Adapter()});
 describe("App component testing", function() {
-  it("renders welcome message", function() {
+  it("renders progressbar dropdown", function() {
     const wrapper = shallow(<App />);
-    const progressbarStatus = <div className="App"></div>;
-    expect(wrapper.contains(progressbarStatus)).to.equal(true);
+    expect(wrapper.find('ProgressBarSelect')).to.have.length(1);
   });
+
+  it("renders button panel", function() {
+    const wrapper = shallow(<App />);
+    expect(wrapper.find('ButtonPanel')).to.have.length(1);
+  });
+
 });

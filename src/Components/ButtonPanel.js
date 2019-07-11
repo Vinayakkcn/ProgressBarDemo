@@ -19,7 +19,5 @@ const ButtonPanel = props => {
     </MDBBtnGroup>
   );
 };
-ButtonPanel.propTypes = {
-  buttonLabel: PropTypes.array.isRequired
-};
+
 export default ButtonPanel;
